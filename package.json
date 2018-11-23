@@ -1,0 +1,28 @@
+{
+  "name": "seanlab-makecode",
+  "productName": "Magibit Makecode",
+  "version": "1.0.0",
+  "description": "Blocks / Javascript editor",
+  "author": "sean(newstein33@gmail.com)",
+  "email": "sean(newstein33@gmail.com)",
+  "main": "main.js",
+  "scripts": {
+    "start": "node_modules/.bin/electron ./main.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -mw",
+    "build:all": "electron-builder -mwl",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux"
+  },
+  "dependencies": {
+    "pxt-core": "*",
+    "pxt-microbit": "*",
+    "thenjs": "*"
+  },
+  "devDependencies": {
+    "electron": "*",
+    "electron-builder": "*"
+  },
+  "license": "MIT"
+}
