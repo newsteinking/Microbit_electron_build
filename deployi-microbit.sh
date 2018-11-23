@@ -13,12 +13,19 @@ git config --global user.name "newstein33"
 mkdir editor
 cd editor
 mkdir Microbit_electron_build
+git clone https://github.com/Microsoft/pxt.git 
+git clone https://github.com/Microsoft/pxt-microbit.git
+
 git clone https://github.com/newsteinking/Microbit_electron_build.git  microbit-gui-source
 cd microbit-gui-source
 npm install > /dev/null 2>&1
-git clone https://github.com/Microsoft/pxt-microbit.git 
-cd pxt-microbit
-npm install > /dev/null 2>&1
+
+npm link ../pxt
+npm link ../pxt-microbit
+npm install
+npm uninstall pxt-core
+npm install
+
 cd ../
 
 #npm build run build> /dev/null 2>&1
