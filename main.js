@@ -9,7 +9,7 @@ function printCurrentTime(msg) {
 }
 function main() {
     printCurrentTime("start main function.");
-    var cliPath = path.join(__dirname, "node_modules/pxt-microbit");
+    var cliPath = path.join(__dirname, "pxt-microbit");
     pxt.mainCli(cliPath, ["serve", "-no-browser"]);
     printCurrentTime("end main function");
 }
