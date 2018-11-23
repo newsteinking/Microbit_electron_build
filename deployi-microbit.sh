@@ -16,24 +16,24 @@ mkdir Microbit_electron_build
 git clone https://github.com/newsteinking/Microbit_electron_build  microbit-gui-source
 cd microbit-gui-source
 npm install > /dev/null 2>&1
-npm build run build> /dev/null 2>&1
+#npm build run build> /dev/null 2>&1
 cd ../
 cp -r ./microbit-gui-source/* ./
 rm -r -f "microbit-gui-source"
 
 cd ../
 echo "Win x64"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform win32 --arch x64 --out out --icon micro-bit-logo.ico --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform win32 --arch x64 --out out --icon micro-bit-logo.ico --prune false
 echo "Win x32"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform win32 --arch ia32 --out out --icon micro-bit-logo.ico --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform win32 --arch ia32 --out out --icon micro-bit-logo.ico --prune false
 echo "Linux x64"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform linux --arch x64 --out out --icon micro-bit-logo.png --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform linux --arch x64 --out out --icon micro-bit-logo.png --prune false
 echo "Linux x32"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform linux --arch ia32 --out out --icon micro-bit-logo.png --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform linux --arch ia32 --out out --icon micro-bit-logo.png --prune false
 echo "Linux ARM"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform linux --arch armv7l --out out --icon micro-bit-logo.png --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform linux --arch armv7l --out out --icon micro-bit-logo.png --prune false
 echo "Mac x64"
-./node_modules/.bin/electron-packager . "Microbit3.0" --asar --platform darwin --arch x64 --out out --icon icon.icns --prune false
+./node_modules/.bin/electron-packager ./editor/ "Microbit3.0" --asar --platform darwin --arch x64 --out out --icon icon.icns --prune false
 
 # deploy
 cd out
