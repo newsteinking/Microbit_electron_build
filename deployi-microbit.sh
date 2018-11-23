@@ -12,12 +12,12 @@ git config --global user.name "newstein33"
 # build (CHANGE THIS)
 mkdir editor
 cd editor
-mkdir microbit-gui
+mkdir pxt-microbit
 git clone https://github.com/Microsoft/pxt-microbit  microbit-gui-source
 cd microbit-gui-source
 npm install > /dev/null 2>&1
 #npm build:all  > /dev/null 2>&1
-cd ..
+cd ../
 cp -r ./microbit-gui-source/* ./
 rm -r -f "microbit-gui-source"
 
