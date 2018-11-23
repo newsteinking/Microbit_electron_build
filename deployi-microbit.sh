@@ -13,7 +13,7 @@ git config --global user.name "newstein33"
 mkdir editor
 cd editor
 mkdir microbit-gui
-git clone https://github.com/newsteinking/makecode.git  microbit-gui-source
+git clone https://github.com/Microsoft/pxt-microbit  microbit-gui-source
 cd microbit-gui-source
 npm install > /dev/null 2>&1
 #npm build:all  > /dev/null 2>&1
