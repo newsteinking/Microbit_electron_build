@@ -19,7 +19,7 @@ npm install > /dev/null 2>&1
 #npm build:all  > /dev/null 2>&1
 cd ..
 cp -r ./microbit-gui-source/* ./
-#rm -r -f "microbit-gui-source"
+rm -r -f "microbit-gui-source"
 
 cd ../
 echo "Win x64"
